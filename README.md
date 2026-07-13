@@ -79,22 +79,7 @@ identically on a developer's laptop, in CI, and on a plain Ubuntu VPS with no sp
 module, which is precisely what makes it viable as a **portfolio / learning project** rather than
 a kernel-networking research artifact.
 
-## 1.2 Why This Is a Strong Portfolio Project
-
-From an architecture and engineering-craft point of view, this project is deliberately designed to
-exercise the full breadth of skills expected of a senior/principal backend or platform engineer:
-
-| Dimension | What It Demonstrates |
-|---|---|
-| Protocol-level systems programming | Implementing a congestion-control state machine against a real transport (QUIC/UDP), not a toy simulation |
-| Concurrency & performance engineering | Lock-free/low-allocation telemetry generation at a fixed 50 ms cadence under Netty's event-loop model |
-| Distributed systems | Redis as both a cache and a Pub/Sub telemetry bus decoupling the engine from consumers |
-| API & security engineering | JWT-secured REST + WebSocket gateway with Spring Security |
-| Production engineering | Multi-stage Docker builds, `docker-compose`, Nginx reverse proxying, and a real Ubuntu VPS deployment target |
-| Quality engineering | Enforced static analysis, coverage gates, dependency vulnerability scanning, and JMH micro-benchmarking |
-| DevOps / CI-CD | A full GitHub Actions pipeline mirroring what a production team would actually gate merges on |
-
-## 1.3 Engineering Rules Governing This Project
+## 1.2 Engineering Rules Governing This Project
 
 The specification this document is built from encodes a set of non-negotiable engineering rules.
 They are restated here because every chapter that follows is a direct consequence of them:
